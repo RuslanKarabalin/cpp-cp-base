@@ -1,0 +1,10 @@
+*
+
+!template/in01.txt
+!template/in02.txt
+!template/template.cpp
+
+!.gitignore
+
+!Makefile
+!README.md
