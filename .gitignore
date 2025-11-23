@@ -1,5 +1,6 @@
 *
 
+!template
 !template/in01.txt
 !template/in02.txt
 !template/template.cpp
@@ -8,3 +9,5 @@
 
 !Makefile
 !README.md
+
+!*/

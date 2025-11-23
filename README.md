@@ -3,5 +3,5 @@
 ## Пример запуска
 
 ```bash
-make PROG=template
+make run PROG=template
 ```
