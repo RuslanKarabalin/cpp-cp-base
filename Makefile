@@ -1,4 +1,5 @@
-TESTNUM = 01
+PROG ?= template
+TESTNUM ?= 01
 
 run:
 	g++ -O2 -lm -fno-stack-limit -std=c++23 -x c++ $(PROG)/$(PROG).cpp -o $(PROG).x && \
