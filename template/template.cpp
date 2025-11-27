@@ -1,4 +1,5 @@
 #include "krt/Krt.h"
+#include "krt/VectorOut.h"
 #include <iostream>
 #include <vector>
 

@@ -6,6 +6,7 @@
 !template/template.cpp
 !template/krt
 !template/krt/Krt.h
+!template/krt/VectorOut.h
 
 !.gitignore
 

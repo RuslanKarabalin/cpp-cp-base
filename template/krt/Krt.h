@@ -16,7 +16,7 @@ namespace krt {
         { a == b } -> std::convertible_to<bool>;
         { a != b } -> std::convertible_to<bool>;
     };
-{
+}
 
 namespace krt {
     // Stack based on std::vector
@@ -70,21 +70,6 @@ namespace krt {
     private:
         std::vector<T> data;
     };
-}
-
-// Standard operator<< overloading for std::vector<T>
-template <typename T>
-std::ostream &operator<<(std::ostream &out, const std::vector<T> &v) {
-    out << "[";
-    for (size_t i = 0; i < v.size(); ++i) {
-        const auto &x = v[i];
-        out << x;
-        if (i < v.size() - 1) {
-            out << ", ";
-        }
-    }
-    out << "]";
-    return out;
 }
 
 # endif  // KRT_H_
