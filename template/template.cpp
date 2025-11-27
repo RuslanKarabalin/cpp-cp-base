@@ -1,7 +1,7 @@
-#include "krt/Krt.h"
-#include "krt/VectorOut.h"
 #include <iostream>
 #include <vector>
+#include "krt/Stack.h"
+#include "krt/VectorOut.h"
 
 int main() {
     std::ios_base::sync_with_stdio(false);

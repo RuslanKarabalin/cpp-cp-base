@@ -5,8 +5,11 @@
 !template/in02.txt
 !template/template.cpp
 !template/krt
-!template/krt/Krt.h
+!template/krt/Comparable.h
+!template/krt/Stack.h
 !template/krt/VectorOut.h
+
+!.clang-format
 
 !.gitignore
 
