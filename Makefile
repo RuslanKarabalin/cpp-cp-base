@@ -9,6 +9,6 @@ generate:
 	mkdir -p $(PROG) && cp template/template.cpp $(PROG)/$(PROG).cpp && cp template/in01.txt $(PROG)/in01.txt
 
 format:
-	clang-format -i $$(find template \
+	clang-format -i $$(find . \
 		-name '*.cpp' -o -name '*.cc' -o -name '*.c' \
 		-o -name '*.hpp' -o -name '*.hh' -o -name '*.h')

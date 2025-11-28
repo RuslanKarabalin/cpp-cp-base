@@ -1,7 +1,9 @@
-#ifndef VECTOR_H_
-#define VECTOR_H_
+#ifndef STACK_H_
+#define STACK_H_
 
 #include <iostream>
+#include <stdexcept>
+#include <utility>
 #include <vector>
 
 namespace krt {
@@ -31,6 +33,22 @@ class Stack {
         return data.back();
     }
 
+    const T& top() const {
+        if (empty()) {
+            throw std::out_of_range("Empty stack!");
+        }
+        return data.back();
+    }
+
+    void clear() { data.clear(); }
+
+    void swap(Stack& other) { data.swap(other.data); }
+
+    template <typename... Args>
+    void emplace(Args&&... args) {
+        data.emplace_back(std::forward<Args>(args)...);
+    }
+
     // Standard operator<< overloading for krt::Stack<T>
     // From "top" to "bottom"
     friend std::ostream& operator<<(std::ostream& out, const Stack<T>& s) {
@@ -50,4 +68,4 @@ class Stack {
 };
 }  // namespace krt
 
-#endif  // VECTOR_H_
+#endif  // STACK_H_

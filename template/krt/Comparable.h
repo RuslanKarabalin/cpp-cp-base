@@ -1,7 +1,7 @@
 #ifndef COMPARABLE_H_
 #define COMPARABLE_H_
 
-#include <stdexcept>
+#include <concepts>
 
 namespace krt {
 // Concept for comparable types

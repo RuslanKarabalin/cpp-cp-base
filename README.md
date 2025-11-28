@@ -1,7 +1,11 @@
 # cpp-cp-base
 
-## Пример запуска
+## Примеры запуска
 
 ```bash
-make run PROG=template
+make generate PROG=new
+```
+
+```bash
+make run PROG=new TESTNUM=01
 ```
