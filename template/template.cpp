@@ -1,26 +1,30 @@
 #include <iostream>
 #include <vector>
-#include "krt/Stack.h"
-#include "krt/VectorOut.h"
+
+using namespace std;
+
+class Solution {};
+
+// Standard operator<< overloading for std::vector<T>
+template <typename T>
+std::ostream& operator<<(std::ostream& out, const std::vector<T>& v) {
+    out << "[";
+    for (size_t i = 0; i < v.size(); ++i) {
+        const auto& x = v[i];
+        out << x;
+        if (i < v.size() - 1) {
+            out << ", ";
+        }
+    }
+    out << "]";
+    return out;
+}
 
 int main() {
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(nullptr);
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-    size_t n;
-    std::cin >> n;
+    Solution s;
 
-    std::vector<int> vector;
-    krt::Stack<int> krtStack;
-
-    for (size_t i = 0; i < n; ++i) {
-        int v;
-        std::cin >> v;
-        vector.push_back(v);
-        krtStack.push(v);
-    }
-
-    std::cout << "std::vector<T>: " << vector << std::endl;
-    std::cout << "krt::Stack<T>: " << krtStack << std::endl;
     return 0;
 }
