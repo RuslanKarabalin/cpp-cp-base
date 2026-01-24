@@ -1,11 +1,6 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
-
-class Solution {};
-
-// Standard operator<< overloading for std::vector<T>
 template <typename T>
 std::ostream& operator<<(std::ostream& out, const std::vector<T>& v) {
     out << "[";
@@ -20,9 +15,11 @@ std::ostream& operator<<(std::ostream& out, const std::vector<T>& v) {
     return out;
 }
 
+class Solution {};
+
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(nullptr);
 
     Solution s;
 
