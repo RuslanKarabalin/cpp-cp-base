@@ -6,9 +6,9 @@ run:
 	./$(PROG).x < $(PROG)/in$(TESTNUM).txt
 	rm $(PROG).x
 
-generate:
+gen:
 	mkdir -p $(PROG) && cp template/template.cpp $(PROG)/$(PROG).cpp
 	cp template/in01.txt $(PROG)/in01.txt
 
-format:
+fmt:
 	clang-format -i $$(find . -name '*.cpp')
